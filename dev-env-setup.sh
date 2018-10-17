@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt install git vim  python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential \
-flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf texinfo \
-libftdi-dev python-yaml zlib1g-dev minicom putty curl libusb-1.0-0-dev \
+flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf chrome-gnome-shell texinfo \
+libftdi-dev python-yaml zlib1g-dev arc-theme minicom putty curl gnome-shell-extensions gnome-tweak-tool libusb-1.0-0-dev \
 
 #Chrome install
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -34,3 +34,8 @@ cd openocd.git
 ./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
 make
 sudo make install
+
+#Paper icon theme install
+sudo add-apt-repository -u ppa:snwh/ppa
+sudo apt-get install paper-icon-theme
+
