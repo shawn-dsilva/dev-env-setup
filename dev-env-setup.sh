@@ -29,7 +29,7 @@ sudo add-apt-repository -u ppa:snwh/ppa -y
 
 
 sudo apt update 
-sudo apt install  -y google-chrome-stable nodejs code mongodb-org docker-ce  arc-theme paper-icon-theme
+sudo apt install  -y google-chrome-stable nodejs code mongodb-org docker-ce docker-compose arc-theme paper-icon-theme
 
 
 #IntelliJ
