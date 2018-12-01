@@ -1,8 +1,8 @@
 #!/bin/bash
 
 sudo apt install git vim gcc g++ make curl python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential ubuntu-make \
-flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf chrome-gnome-shell texinfo \
-libftdi-dev python-yaml zlib1g-dev minicom putty gnome-shell-extensions gnome-tweak-tool libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common \
+flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf libtool texinfo \
+libftdi-dev python-yaml zlib1g-dev minicom putty   libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common \
 
 #Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -25,13 +25,13 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD7
 echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 
 #Paper icon theme repo
-sudo add-apt-repository -u ppa:snwh/ppa -y
+#sudo add-apt-repository -u ppa:snwh/ppa -y
 
 
 # Apt update and installs
 
 sudo apt update 
-sudo apt install  -y google-chrome-stable nodejs code mongodb-org docker-ce docker-compose arc-theme paper-icon-theme
+sudo apt install  -y google-chrome-stable nodejs code mongodb-org 
 
 
 #IntelliJ
