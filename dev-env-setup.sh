@@ -74,6 +74,9 @@ code --install-extension PKief.material-icon-theme
 code --install-extension shakram02.bash-beautify
 code --install-extension zhuangtongfa.Material-theme
 
+#Oh my Zsh spaceship theme
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
 #OpenOCD install
 git clone git://git.code.sf.net/p/openocd/code openocd.git
