@@ -2,7 +2,7 @@
 
 sudo apt install git vim gcc g++ make curl python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential ubuntu-make \
 flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf libtool texinfo \
-libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge
+libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge fonts-firacode
 zsh \
 
 #Chrome repo
@@ -26,12 +26,12 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 9DA31620334BD7
 echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.0.list
 
 #Paper icon theme repo
-#sudo add-apt-repository -u ppa:snwh/ppa -y
+sudo add-apt-repository -u ppa:snwh/ppa -y
 
 
 # Apt update and installs
 
-sudo apt update 
+sudo apt update -y
 sudo apt install  -y google-chrome-stable nodejs code mongodb-org 
 
 
@@ -47,6 +47,7 @@ sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 #OH MY ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 
 #npm global installs
 
@@ -81,3 +82,6 @@ cd openocd.git
 ./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
 make
 sudo make install
+
+#Konsole colorschemes
+cp * KonsoleColorschemes/ ~/.local/share/konsole
