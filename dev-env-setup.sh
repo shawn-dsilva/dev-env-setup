@@ -2,7 +2,8 @@
 
 sudo apt install git vim gcc g++ make curl python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential ubuntu-make \
 flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf libtool texinfo \
-libftdi-dev python-yaml zlib1g-dev minicom putty   libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common \
+libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge
+zsh \
 
 #Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -38,13 +39,14 @@ sudo apt install  -y google-chrome-stable nodejs code mongodb-org
 
 umake ide idea
 
-#OpenOCD install
-git clone git://git.code.sf.net/p/openocd/code openocd.git
-cd openocd.git
-./bootstrap
-./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
-make
-sudo make install
+#Postman install
+
+wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
+sudo tar -xzf postman.tar.gz -C /opt
+sudo ln -s /opt/Postman/Postman /usr/bin/postman
+
+#OH MY ZSH
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 #npm global installs
 
@@ -72,4 +74,10 @@ code --install-extension shakram02.bash-beautify
 code --install-extension zhuangtongfa.Material-theme
 
 
-
+#OpenOCD install
+git clone git://git.code.sf.net/p/openocd/code openocd.git
+cd openocd.git
+./bootstrap
+./configure --prefix=/usr --enable-maintainer-mode --enable-stlink --enable-ti-icdi
+make
+sudo make install
