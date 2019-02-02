@@ -2,8 +2,7 @@
 
 sudo apt install git vim gcc g++ make curl python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential ubuntu-make \
 flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf libtool texinfo \
-libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge fonts-firacode
-zsh 
+libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge fonts-firacode zsh 
 
 #Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
