@@ -3,7 +3,7 @@
 sudo apt install git vim gcc g++ make curl python3 python3-pip gcc-arm-none-eabi gdb-multiarch build-essential ubuntu-make \
 flex bison libgmp3-dev libmpfr-dev libncurses5-dev libmpc-dev autoconf libtool texinfo \
 libftdi-dev python-yaml zlib1g-dev minicom putty libusb-1.0-0-dev  apt-transport-https ca-certificates  software-properties-common deluge fonts-firacode zsh \
-powertop tlp
+qemu-kvm libvirt-bin bridge-utils virt-manager qemu-system powertop tlp
 
 #Chrome repo
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
@@ -33,8 +33,8 @@ sudo apt install  -y google-chrome-stable nodejs code mongodb-org
 
 #Postman install
 
-wget https://dl.pstmn.io/download/latest/linux64 -O postman.tar.gz
-sudo tar -xzf postman.tar.gz -C /opt
+wget https://dl.pstmn.io/download/latest/linux64 -O ~/Downloads/postman.tar.gz
+sudo tar -xzf ~/Downloads/postman.tar.gz -C /opt
 sudo ln -s /opt/Postman/Postman /usr/bin/postman
 
 #OH MY ZSH
